@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
 
+:root {
+  --mainBgColor: rgb(249, 250, 251);
+  --mainTextColor: #000;
+  --secondaryTextColor: rgb(51 51 51);
+  --Grayish-blue: hsl(233, 8%, 79%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,36 +19,76 @@ html,body {
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 62.5%;
   line-height: 1.5;
+  background-color: var(--mainBgColor);
+  scroll-behavior: smooth;
 }
 
 i {
   font-size: 2.5rem;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  color: var(--secondaryTextColor);
+  display: inline-block;
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 300;
+  color: var(--mainTextColor);
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
 }
 
 .container {
-  width: 120rem;
+  width: 110rem;
   margin: 0 auto;
   padding: 2rem;
 }
 
+.btn {
+  background-color: var(--mainTextColor);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  border: 1px solid var(--mainTextColor)
+}
+
+.btn:hover {
+  color: var(--mainTextColor);
+  background-color: #fff;
+}
+
+.margin-top-1 {
+  margin-top: 1rem;
+}
+
+.margin-top-2 {
+  margin-top: 2rem;
+}
+
+.margin-top-5 {
+  margin-top: 5rem;
+}
+
 /* header section */
-.header-content {
+#header {
+  border-bottom: 1px solid var(--Grayish-blue);
+}
+
+.header-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -49,4 +96,76 @@ p {
 .navbar {
   display: flex;
   gap: 1.5rem;
+}
+
+/* main section */
+.main-container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main-socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.main-content {
+  flex-basis: 48rem;
+}
+
+.main-content h2 {
+  font-size: 4.2rem;
+}
+
+.main-content .en-name {
+  font-size: 2.4rem;
+}
+
+.main-line-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.main-line-container .line {
+  width: 5rem;
+  height: .1rem;
+  background-color: var(--Grayish-blue);
+}
+
+.main-line-container p {
+  margin-left: 1rem;
+}
+
+.main-img {
+  background: url(../images/Miao-1.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 30rem;
+  height: 30rem;
+  box-shadow: inset 0 0 0 9px rgb(225 225 225 / 30%);
+  order: 1;
+  justify-self: center;
+  animation: profile_animate 8s ease-in-out infinite 1s;
+}
+
+
+@keyframes profile_animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
 }
