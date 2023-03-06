@@ -51,7 +51,7 @@ p {
 }
 
 .container {
-  width: 110rem;
+  max-width: 110rem;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -123,6 +123,7 @@ p {
 
 /* Hamburger Menu */
 .hamburger {
+  display: none;
   position: fixed;
   top: 30px;
   right: 30px;
@@ -170,6 +171,25 @@ p {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
 
+/* Overlay */
+.overlay-show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.stop-scrolling {
+  overflow: hidden;
+}
+
+.mobile-main-menu {
+  display: none;
+}
+
 /* main section */
 .main-container {
   display: flex;
@@ -177,6 +197,7 @@ p {
   justify-content: space-evenly;
   align-items: center;
   gap: 2rem;
+  padding: 5rem 8rem;
 }
 
 .main-socials {
@@ -187,7 +208,7 @@ p {
 }
 
 .main-content {
-  flex-basis: 48rem;
+  flex: 1 1 40rem;
 }
 
 .main-content h2 {
@@ -206,7 +227,7 @@ p {
 
 .main-line-container .line {
   width: 5rem;
-  height: .1rem;
+  height: 0.1rem;
   background-color: var(--Grayish-blue);
 }
 
@@ -244,12 +265,83 @@ p {
 
 /* Media Queries */
 @media(max-width: 960px) {
-  /* Hide desktop menu */
-  .navbar {
-    display: none;
-  }
+  
 }
 
 @media(max-width: 600px) {
 
+  /* Hide desktop menu */
+    .navbar {
+      display: none;
+    }
+  
+    /* Show main mobile items */
+    .mobile-main-menu {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 75%;
+      height: 100%;
+      background-color: var(--mainBgColor);
+      z-index: 4;
+      padding: 5rem;
+      transform: translateX(100%);
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .show-mobile-menu {
+      transform: translateX(0);
+    }
+  
+    .mobile-only {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      flex-grow: 1;
+      gap: 2rem;
+    }
+  
+    .mobile-only a {
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--mainTextColor);
+    }
+  
+    .hamburger {
+      display: block;
+    }
+}
+
+@media (max-width: 420px) {
+  p {
+    font-size: 1.6rem;
+  }
+
+  a {
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .main-container {
+    padding: 2rem;
+  }
+
+  .main-content {
+    flex: 1 1 28rem;
+  }
+
+  .main-content h2 {
+    font-size: 3.6rem;
+  }
+
+  .main-img {
+    width: 25rem;
+    height: 25rem;
+  }
 }
