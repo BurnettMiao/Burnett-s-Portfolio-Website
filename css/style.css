@@ -99,6 +99,7 @@ p {
   left: 0;
   background-color: var(--mainBgColor);
   width: 100%;
+  z-index: 3;
 }
 
 .header-container {
@@ -407,7 +408,6 @@ p {
   height: 100%;
   background-color: var(--mainTextColor);
   transform: translate(6px, -7px);
-  z-index: 0;
 }
 
 /* skills section */
@@ -527,6 +527,7 @@ p {
   .mobile-only a {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--mainTextColor);
+    font-size: 2.2rem;
   }
 
   .hamburger {
