@@ -407,6 +407,7 @@ p {
   height: 100%;
   background-color: var(--mainTextColor);
   transform: translate(6px, -7px);
+  z-index: 0;
 }
 
 /* skills section */
