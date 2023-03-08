@@ -592,7 +592,7 @@ p {
 @media (max-width: 600px) {
   html,
   body {
-    scroll-padding-top: 3rem;
+    scroll-padding-top: 4rem;
   }
 
   /* Hide desktop menu */
