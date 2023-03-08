@@ -22,7 +22,7 @@ body {
   line-height: 1.5;
   background-color: var(--mainBgColor);
   scroll-behavior: smooth;
-  scroll-padding-top: 8rem;
+  scroll-padding-top: 6rem;
 }
 
 i {
@@ -592,7 +592,7 @@ p {
 @media (max-width: 600px) {
   html,
   body {
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 4rem;
   }
 
   /* Hide desktop menu */
