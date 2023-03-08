@@ -542,6 +542,29 @@ p {
   border-bottom: 1px solid var(--mainTextColor);
 }
 
+/* footer section */
+#footer {
+  margin-top: 10rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.footer-container .socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.footer-container .socials i {
+  font-size: 3rem;
+}
+
 /* Media Queries */
 @media (max-width: 960px) {
   #about {
@@ -557,6 +580,10 @@ p {
   }
 
   #projects {
+    margin-top: 5rem;
+  }
+
+  #footer {
     margin-top: 5rem;
   }
 }
@@ -629,6 +656,11 @@ p {
 
   .skills-cards {
     margin-top: 2rem;
+  }
+
+  .footer-container {
+    gap: 2rem;
+    flex-direction: column-reverse;
   }
 }
 
