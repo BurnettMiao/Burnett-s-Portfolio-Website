@@ -10,3 +10,20 @@ function navToggle() {
   document.body.classList.toggle('stop-scrolling');
   showMobileMenu.classList.toggle('show-mobile-menu');
 }
+
+const projectBtn = Array.from(
+  document.querySelectorAll('.projects-category > div')
+);
+const projectItem = Array.from(
+  document.querySelectorAll('.project-item-container .projects-cards')
+);
+
+projectBtn.forEach((btn) => {
+  btn.addEventListener('click', function () {
+    projectItem.forEach((item) => {
+      item.classList.add('no-show');
+    });
+    let index = projectBtn.indexOf(this);
+    projectItem[index].classList.remove('no-show');
+  });
+});
