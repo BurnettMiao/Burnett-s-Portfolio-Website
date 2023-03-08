@@ -23,7 +23,11 @@ projectBtn.forEach((btn) => {
     projectItem.forEach((item) => {
       item.classList.add('no-show');
     });
+    projectBtn.forEach((item) => {
+      item.classList.remove('active');
+    });
     let index = projectBtn.indexOf(this);
     projectItem[index].classList.remove('no-show');
+    btn.classList.add('active');
   });
 });

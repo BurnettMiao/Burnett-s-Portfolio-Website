@@ -487,6 +487,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding-bottom: 1rem;
   cursor: pointer;
 }
 
@@ -535,6 +536,10 @@ p {
 
 .no-show {
   display: none;
+}
+
+.active {
+  border-bottom: 1px solid var(--mainTextColor);
 }
 
 /* Media Queries */
