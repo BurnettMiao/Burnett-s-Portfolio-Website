@@ -461,6 +461,33 @@ p {
   font-weight: 500;
 }
 
+/* projects section */
+#projects {
+  margin-top: 10rem;
+}
+
+.projects-container {
+  margin-top: 5rem;
+}
+
+.projects-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.projects-category p {
+  font-weight: 700;
+}
+
+.projects-category div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* Media Queries */
 @media (max-width: 960px) {
   #about {
@@ -472,6 +499,10 @@ p {
   }
 
   #experience {
+    margin-top: 5rem;
+  }
+
+  #projects {
     margin-top: 5rem;
   }
 }
