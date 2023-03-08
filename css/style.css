@@ -590,6 +590,11 @@ p {
 }
 
 @media (max-width: 600px) {
+  html,
+  body {
+    scroll-padding-top: 5rem;
+  }
+
   /* Hide desktop menu */
   .navbar {
     display: none;
