@@ -475,6 +475,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .projects-category p {
@@ -486,6 +487,49 @@ p {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.projects-cards {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 28rem;
+  padding: 2rem;
+  border: 1px solid var(--Grayish-blue);
+  border-radius: 10px;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.project-card-link {
+  display: flex;
+  align-items: center;
+  color: var(--Grayish-blue);
+}
+
+.project-card-link:hover i {
+  transform: translateX(5px);
+}
+
+.project-card-title {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.project-card-link p {
+  font-weight: 500;
+  color: var(--Grayish-blue);
 }
 
 /* Media Queries */
