@@ -549,6 +549,7 @@ p {
 
 /* footer section */
 #footer {
+  border-top: 1px solid var(--Grayish-blue);
   margin-top: 10rem;
 }
 
